@@ -1,0 +1,14 @@
+--cpu Cortex-M3
+".\objects\main.o"
+".\objects\gpio_driver.o"
+".\objects\i2c_driver.o"
+".\objects\sysclock.o"
+".\objects\timer_driver.o"
+".\objects\hcsr04.o"
+".\objects\lcd_i2c.o"
+".\objects\startup_stm32f10x_md.o"
+".\objects\system_stm32f10x.o"
+--strict --scatter ".\Objects\MeasureDistance.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\MeasureDistance.map" -o .\Objects\MeasureDistance.axf
